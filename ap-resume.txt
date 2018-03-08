@@ -1,0 +1,43 @@
+## Projects
+FriceEngine
+https://github.com/icela/FriceEngine
+A multilingual, natively-written, easy-to-use game engine series.
+• Easy to use, just to implement life cycle methods and use the super-convenient APIs.
+• Easy to install, based on the built-in GUI framework of each language.
+• A JavaFX-based drag-and-drop GUI designer, generates multilingual codes for each language.
+
+Lice
+https://github.com/lice-lang/lice
+A scalable programming language running on JVM.
+• Support lazy (call by need) / macro (call by name) / strict (call by value).
+• A development kit, a command-line REPL with code completion.
+• Perfect interaction with JVM languages.
+
+Kt2Dart
+https://github.com/ice1000/Kt2Dart
+A transpiler that converts Kotlin codes into Dart, written in Haskell.
+
+Theorems
+https://github.com/ice1000/Theorems
+Using Agda to prove some algebraic theorems.
+
+## Achievements
+1 kyu on CodeWars (www.codewars.com), ranked #28, primarily in Haskell
+
+## Skills
+• Programming Languages: multilingual dev, not limited to any specific language, but mostly experienced
+  in Java/Kotlin/Dart/C#/Haskell/Agda
+• Compilers: familiar with LLVM IR, backend optimizations, AST transformations, compiling closures, etc.
+• Kotlin: 2 years of experience, 4 projects in Awesome Kotlin
+• Agda: understand type-level programming and formal verifications
+• JetBrains MPS: 2 years of experience, understand Language-Oriented Programming
+• Platforms: Java SE & JNI & Android, Flutter & Fuchsia, JetBrains MetaProgrammingSystem
+• Editors: proficient in JetBrains IDEs, Emacs
+
+## Miscellaneous
+• Blog: http://ice1000.org/
+• Opensource contributions: http://ice1000.org/opensource-contributions/
+  contributed to organizations like Microsoft, shields.io, Ruby, etc.
+• StackOverflow: http://stackoverflow.com/users/7083401/ice1000
+  also active on other StackExchange sites
+• Languages: English - fluent (TOEFL 100), Chinese - native speaker

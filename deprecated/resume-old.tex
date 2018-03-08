@@ -1,0 +1,98 @@
+\documentclass[margin, line]{res}
+% This is my resume
+% by ice1000
+
+\usepackage{color, graphicx, hyperref}
+
+\oddsidemargin  -0.3in
+\evensidemargin -0.3in
+\resumewidth    = 1.5in
+\itemsep        = 0.1in
+\parsep         = 0.0in
+\sectionskip    = 0.1in
+\sectionwidth   = 1.2in
+
+\newenvironment{list1}{
+  \begin{list}
+    {\ding{113}}{
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in}
+      \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in}
+      \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0in}
+    }
+    {\end{list}}
+}
+
+\begin{document}
+\name{
+  {\sc Tesla Ice Zhang (ice1000)}
+  (ice1000kotlin@foxmail.com)
+  \vspace*{.1in}
+}
+\begin{resume}
+  % platform I am familiar with
+  \section{\sc Platforms}
+  Java SE \& Android \\
+  Flutter \& Fuchsia \\
+  JetBrains MetaProgrammingSystem
+
+  % my education experience
+  \section{\sc Education}
+  \textbf{ChengDu Foreign Languages School}, 2015.9 - present
+
+  % my GH / SO account
+  \section{\sc Social}
+  Blog: \url{http://ice1000.org/} \\
+  \url{https://github.com/ice1000} \\
+  \url{http://stackoverflow.com/users/7083401/ice1000} \\
+  Always active on GitHub and StackOverflow, frequently submit issues to many opensource projects(like Ruby/Tk).
+
+  % compiler theories
+  \section{\sc Compilers}
+  \url{https://github.com/lice-lang} \\
+  A scalable programming language(supports lazy/macro/strict), interpreted,
+  including the toolchain, the reference, and a simple Haskell implementation.
+
+  % language Java
+  \section{\sc Java}
+  \textbf{2 years of experience} \\
+  Experienced in Android developing and JNI. \\
+  \url{https://github.com/ice1000/algo4j} :
+  An algorithm library(data structures as well) using JNI, tested, usually faster than the std library.
+  
+  % language Kotlin
+  \section{\sc Kotlin}
+  \textbf{2 years of experience} \\
+  Created
+  \url{https://github.com/icela/FriceEngine},
+  with other
+  \textbf{3} projects collected on
+  \href{https://kotlin.link/?q=ice} {Awesome Kotlin}
+
+  % language Haskell
+  \section{\sc Haskell}
+  Achieved
+  \textbf{1 kyu} on
+  \href{https://www.codewars.com/users/ice1000} {CodeWars}
+  primarily in Haskell, ranked \#73. \\
+  Proficient in Parser Combinators, Created
+  \url{https://github.com/ice1000/Kt2Dart} \\
+  a tool parses Kotlin codes and transpile them into Dart.
+
+  % my academic interests
+  \section{\sc Academic Interests}
+  Programming Languages Theory \\
+  Language-Oriented Programming (MPS) \\
+  Functional Programming (Haskell, Scala)
+
+  % my industrial interests
+  \section{\sc Industrial Interests}
+  Mobile Developing (Android, Fuchsia) \\
+  Anything related to Compilers (Parsers, CFA, optimizations)
+
+  \vspace*{-.2in}
+  
+\end{resume}
+\end{document}
