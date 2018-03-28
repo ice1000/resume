@@ -1,0 +1,131 @@
+% !TEX program = xelatex
+% This is my resume
+% by ice1000
+
+\documentclass{resume}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{Tesla Ice Zhang}
+
+\basicInfo{
+  \email{ice1000kotlin@foxmail.com} \textperiodcentered\
+  \phone{(+86) 180-8192-5082} \textperiodcentered\
+  \github[ice1000]{https://github.com/ice1000}
+  % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}
+}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Chengdu Foreign Languages School (CFLS)}, Chengdu, China}{2015.9 -- Present}
+
+\section{\faUsers\ Work Experience}
+\datedsubsection{\textbf{Sourcebrella Inc.}, Shenzhen, China}{2018.2 -- Present}
+\begin{itemize}
+  \item Responsible for IntelliJ / CLion / Eclipse / Eclipse CDT integration of the pinpoint analyzer
+\end{itemize}
+
+\section{\faGithubAlt\ Personal Projects}
+\datedsubsection{\textbf{FriceEngine}}{\url{https://icela.github.io/}}
+% \role{Kotlin, C\#, Racket, Ruby}{Founder and main contributer to the Kotlin/C\#/Ruby version}
+A multilingual, natively-written, easy-to-use game engine series.
+\begin{itemize}
+  \item Based on life cycle / utility APIs, based on each languages' built-in GUI framework,
+    easy to install.
+  \item GitHub issues / milestones are used as task / version managing tools, nice changelogs.
+  \item A JavaFX-based drag-and-drop GUI designer, generates multilingual codes for each language.
+\end{itemize}
+
+\datedsubsection{\textbf{Lice language}}{\url{https://github.com/lice-lang/lice}}
+% \role{Kotlin, Java}{Founder and main contributer}
+A scalable programming language running on JVM.
+\begin{itemize}
+  \item Support lambdas and lazy (call by need) / macro (call by name) / strict (call by value).
+  \item About one-twentieth of Java's (Hotspot 8u151) performance in benchmark, and can perfectly interact with JVM languages, work with Java's built-in script engine.
+  \item Provided JetBrains IDE plugin supporting semantics-based highlightings, error checkings, completions, jump-to-definition, renaming, eval and replace, quick fixes, etc.
+  \item Provided a command-line REPL with GHCi-style code completion and colored output.
+\end{itemize}
+
+\datedsubsection{\textbf{Kt2Dart}}{\url{https://github.com/ice1000/Kt2Dart}}
+A transpiler that converts Kotlin codes into Dart, written in Haskell.
+
+\datedsubsection{\textbf{julia-intellij}}{\url{https://github.com/ice1000/julia-intellij}}
+Julia plugin for JetBrains IDE, works with all JetBrains products.
+\begin{itemize}
+  \item Semantics-based highlighting, error checking, quick fixes, completions, special input mode for unicode symbols.
+  \item Supports existing tools like DocumentFormat.jl, provide config file highlighting, completions and linter.
+  \item Provides a visual package manager that wraps the built-in one.
+  \item Integration with other plugins, like provide Markdown highlighting for doc strings.
+\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faHeartO\ Achievements}
+\datedline{\textbf{1 kyu} on
+  \href{https://www.codewars.com/users/ice1000} {CodeWars},
+  ranked \#32 on the whole site, primarily in Haskell}{Aug. 2017}
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{Programming Languages}:
+    \textbf{multilingual, not limited to any specific language},
+    and especially experienced in Java/Kotlin/Dart/C\#/Haskell/Agda
+
+  % compiler theories
+  \item \textbf{Compilers}:
+    familiar with LLVM IR (and \href{https://github.com/Microsoft/LLVMSharp/} {LLVMSharp}), optimizations, closure convertions, etc.
+
+  % language Kotlin
+  \item \textbf{Kotlin}:
+    \textbf{2 years of experience},
+    \textbf{4} projects in
+    \href{https://kotlin.link/?q=ice} {Awesome Kotlin}
+
+  \item \textbf{Agda}:
+    understand type-level programming and formal verifications
+
+  \item \textbf{JetBrains MPS}:
+    \textbf{1 years of experience},
+    understand Language-Oriented Programming concepts and usage
+
+  \item \textbf{IDE Toolings}:
+    \textbf{1 years of experience},
+    Familiar with the IntelliJ Platform infrastructure,
+    with some experience with Eclipse
+
+  % platforms I am familiar with
+  \item \textbf{Mobile developing}:
+    \textbf{2 years of experience},
+    Android, Fuchsia (Flutter)
+
+  \item \textbf{Editors}:
+    can adapt to any editors, normally use JetBrains IDEs, Emacs, Notepad++
+\end{itemize}
+
+% \section{\faHeartO\ Honors and Awards}
+% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
+% \datedline{Other awards}{2015}
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.5ex]
+  \item Blog: \url{http://ice1000.org/}
+  \item Opensource contributions: \url{http://ice1000.org/opensource-contributions/} \\
+    provide bug fix / new features to organizations like \textbf{Microsoft, JetBrains, shields.io, Ruby,} etc.
+  \item StackOverflow: \url{http://stackoverflow.com/users/7083401/ice1000} \\
+    also active on \href{https://stackexchange.com/users/9532102/ice1000} {other StackExchange} sites
+  \item Languages: English - fluent (TOEFL 100), Chinese - native speaker
+  % https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
+  \item Get the newest version of this resume: \url{https://tinyurl.com/y8xdlfug}
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
+

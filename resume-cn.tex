@@ -1,0 +1,138 @@
+% !TEX program = xelatex
+% This is my resume
+% Chinese translation
+% by ice1000
+
+\documentclass{resume}
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\setmainfont[]{Sarasa Gothic J}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{张寅森}
+
+\basicInfo{
+  \email{ice1000kotlin@foxmail.com} \textperiodcentered\ 
+  \phone{(+86) 180-8192-5082} \textperiodcentered\ 
+  \github[ice1000]{https://github.com/ice1000}
+  % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}
+}
+
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{成都外国语学校}, 成都, 中国}{2015.9 -- 至今}
+
+\section{\faUsers\ 工作经历}
+\datedsubsection{\textbf{前海源伞}, 深圳, 中国}{2018.2 -- 至今}
+\begin{itemize}
+  \item 负责 pinpoint 分析器的 IntelliJ / CLion / Eclipse / Eclipse CDT 工具集成
+\end{itemize}
+
+\section{\faGithubAlt\ 个人项目}
+\datedsubsection{\textbf{FriceEngine}}{\url{https://icela.github.io/}}
+% \role{Kotlin, C\#, Racket, Ruby}{发起者和 Kotlin/C\#/Ruby 版本的主维护者}
+一个跨语言、易使用的游戏引擎系列。
+\begin{itemize}
+  % \item 易于使用，仅需实现生命周期方法，然后调用非常方便的 API 。
+  % \item 易于安装，基于各语言内置的 GUI 框架。
+  \item 基于生命周期方法和工具 API ，并基于各语言内置的 GUI 框架，易于安装。
+  \item 使用 GitHub 的 issue 和 milestone 功能作为任务和版本管理工具，有完善的改动记录。
+  \item 提供一个基于 JavaFX 的拖拽式可视化设计器，可以生成各种语言的代码。
+\end{itemize}
+
+\datedsubsection{\textbf{Lice 语言}}{\url{https://github.com/lice-lang/lice}}
+% \role{Kotlin, Java}{发起者和主维护者}
+高度可扩展的解释型程序语言，运行在 JVM 上。
+\begin{itemize}
+  \item 支持 lambda 和 惰性求值 (call by need) / 正则序求值 (call by name) / 严格求值 (call by value)。
+  \item 在性能测试中运行速度约为 Java (Hotspot 8u151) 的二十分之一，并可以灵活地和 JVM 语言交互，支持 Java 的原生脚本引擎。
+  \item 提供支持基于语义的高亮、自动查错、代码补全、重命名、定义跳转、求值替换、快速修复等功能的 JetBrains IDE 插件。
+  \item 提供支持 GHCi 风格的代码补全和彩色输出的命令行交互式解释器。
+\end{itemize}
+
+\datedsubsection{\textbf{Kt2Dart}}{\url{https://github.com/ice1000/Kt2Dart}}
+一个把 Kotlin 代码翻译成 Dart 的转换器，使用 Haskell 写就。
+
+\datedsubsection{\textbf{julia-intellij}}{\url{https://github.com/ice1000/julia-intellij}}
+JetBrains IDE 的 Julia 插件，支持全线 JetBrains 产品。
+\begin{itemize}
+  \item 支持基于语义的高亮、错误检查、快速修错、定义跳转、代码补全、针对 Unicode 字符的特殊输入。
+  \item 支持现有的 Julia 工具，例如 DocumentFormat.jl ，提供配置文件的高亮、补全和查错。
+  \item 提供一个可视化的包管理工具，封装了 Julia 内置的 Pkg。
+  \item 自动识别其他插件并提供对应的支持，比如对文档字符串进行 Markdown 的高亮。
+\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faHeartO\ 成就}
+\datedline{在
+  \href{https://www.codewars.com/users/ice1000} {CodeWars}
+  上，以 Haskell 为主，达到
+  \textbf{1 kyu}，
+  全站排名 \#32}{Aug. 2017}
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{程序语言}:
+    \textbf{泛语言开发者，不受特定语言限制}，
+    且尤其熟悉 Java/Kotlin/Dart/C\#/Haskell/Agda
+
+  % compiler theories
+  \item \textbf{编译原理}:
+    熟悉 LLVM IR (及 \href{https://github.com/Microsoft/LLVMSharp/} {LLVMSharp}), 后端优化, 闭包转换等
+
+  % language Kotlin
+  \item \textbf{Kotlin}:
+    \textbf{2 年开发经验}，
+    \textbf{4} 个项目被
+    \href{https://kotlin.link/?q=ice} {Awesome Kotlin}
+    收录
+
+  \item \textbf{Agda}:
+    掌握类型层面的编程和形式验证
+
+  \item \textbf{JetBrains MPS}:
+    \textbf{1 年开发经验}，
+    理解面向语言编程的概念和应用
+
+  \item \textbf{IDE 工具开发}:
+    \textbf{1 年开发经验}，
+    熟悉 IntelliJ 平台的基础设施，对 Eclipse 也有一定了解
+
+  % platforms I am familiar with  
+  \item \textbf{移动开发}:
+    \textbf{2 年开发经验}，
+    Android, Fuchsia (Flutter)
+
+  \item \textbf{编辑器与 IDE}:
+    能适应任何编辑器，平常使用 JetBrains IDE, Emacs, Notepad++
+\end{itemize}
+
+% \section{\faHeartO\ Honors and Awards}
+% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
+% \datedline{Other awards}{2015}
+
+\section{\faInfo\ 其他}
+\begin{itemize}[parsep=0.5ex]
+  \item 博客: \url{http://ice1000.org/}
+  \item 开源贡献: \url{http://ice1000.org/opensource-contributions/} \\
+    向 \textbf{Microsoft, JetBrains, shields.io, Ruby} 等组织提交过修 bug / 增加新特性的代码
+  \item StackOverflow: \url{http://stackoverflow.com/users/7083401/ice1000} \\
+    同时也在 \href{https://stackexchange.com/users/9532102/ice1000} {其他 StackExchange 站点} 活跃
+  \item 语言: English - 熟练 (托福 100)，汉语 - 母语水平
+  % https://raw.githubusercontent.com/ice1000/resume/master/resume-cn.pdf
+  \item 获取此简历的最新版本: \url{https://tinyurl.com/ya4urea8}
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
