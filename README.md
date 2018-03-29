@@ -24,5 +24,5 @@ $ make en
 
 # Fun fact
 
-Possibly this is the mostly forked **personal** resume repository:<br/>
+Possibly this is the most forked **personal** resume repository:<br/>
 ![](./art/forks.png)
