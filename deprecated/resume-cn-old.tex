@@ -1,0 +1,102 @@
+\documentclass[margin, line]{res}
+% This is my resume
+% Chinese translation
+% by ice1000
+
+\usepackage{color, graphicx, hyperref, CJKutf8}
+
+\oddsidemargin  -0.3in
+\evensidemargin -0.3in
+\resumewidth    = 1.5in
+\itemsep        = 0.1in
+\parsep         = 0.0in
+\sectionskip    = 0.1in
+\sectionwidth   = 1.2in
+
+\newenvironment{list1}{
+  \begin{list}
+    {\ding{113}}{
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in}
+      \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in}
+      \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0in}
+    }
+    {\end{list}}
+}
+
+\begin{document}
+\name{
+  {\sc 张寅森 (ice1000)}
+  (ice1000kotlin@foxmail.com)
+  \vspace*{.1in}
+}
+\begin{CJK}{UTF8}{gbsn}
+  \begin{resume}
+    % platform I am familiar with
+    \section{\sc 熟悉的平台}
+    Java SE \& Android \\
+    Flutter \& Fuchsia \\
+    JetBrains MetaProgrammingSystem
+    
+    % my education experience
+    \section{\sc 教育经历}
+    \textbf{成都外国语学校}, 2015.9 至今
+    
+    % my GH / SO account
+    \section{\sc 社区}
+    博客: \url{http://ice1000.org/} \\
+    \url{https://github.com/ice1000} \\
+    \url{http://stackoverflow.com/users/7083401/ice1000} \\
+    在 GitHub 和 StackOverflow 上长期保持活跃，保持向许多著名开源项目提交 issue (如 Ruby/Tk)。
+    
+    % compiler theories
+    \section{\sc 编译原理}
+    \url{https://github.com/lice-lang} \\
+    高度可扩展的解释型程序语言(支持 call-by-need/name/value)，包含工具链、语言参考以及一个简单的 Haskell 实现。
+
+    % language Java
+    \section{\sc Java}
+    \textbf{2 年开发经验} \\
+    熟悉 Android 开发和 JNI 开发. \\
+    \url{https://github.com/ice1000/algo4j} :
+    一个 JNI 实现的算法 (及数据结构) 库，有严格测试，很多情况下比标准库快。
+    
+    % language Kotlin
+    \section{\sc Kotlin}
+    \textbf{2 年开发经验} \\
+    开发了
+    \url{https://github.com/icela/FriceEngine},
+    和另外
+    \textbf{三个} 项目，被
+    \href{https://kotlin.link/?q=ice} {Awesome Kotlin}
+    收录。
+    
+    % language Haskell
+    \section{\sc Haskell}
+    在
+    \href{https://www.codewars.com/users/ice1000} {CodeWars}
+    上，以 Haskell 为主，达到
+    \textbf{1 kyu}
+    ，排名 \#73。 \\
+    熟悉 Parser Combinator 的使用，开发了
+    \url{https://github.com/ice1000/Kt2Dart} \\
+    一个解析 Kotlin 代码并将其翻译到 Dart 的翻译器。
+
+    % my academic interests
+    \section{\sc 学术兴趣}
+    程序设计语言理论 (PLT) \\
+    面向语言编程 (LOP, MPS) \\
+    函数式编程 (Haskell, Scala)
+
+    % my industrial interests
+    \section{\sc 工业兴趣}
+    移动端开发 (Android, Fuchsia) \\
+    编译器相关工作 (CFA, 优化, Parser)
+
+    \vspace*{-.2in}
+
+  \end{resume}
+\end{CJK}
+\end{document}
