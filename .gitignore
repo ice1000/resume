@@ -1,0 +1,18 @@
+
+## LaTeX ##
+
+*.bbl
+*.blg
+*.log
+*.gz
+*.bak
+*.html
+*.aux
+*.ilg
+*.ind
+
+.idea/
+
+## Emacs ##
+
+*~

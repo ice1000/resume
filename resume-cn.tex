@@ -1,0 +1,183 @@
+% !TEX program = xelatex
+% This is my resume
+% Chinese translation
+% by ice1000
+
+\documentclass{resume}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage[fallback]{xeCJK}
+
+%% \setmainfont[]{SimSun}
+%% \setCJKfallbackfamilyfont{rm}{HAN NOM B}
+\setCJKmainfont[BoldFont=Sarasa Gothic SC,ItalicFont=KaiTi_GB2312]{Source Han Serif SC}
+%% \renewcommand{\thepage}{\Chinese{page}}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\name{张寅森}
+
+\basicInfo{
+  \email{ice1000kotlin@foxmail.com} \textperiodcentered\ 
+  \phone{(+86) 180-8192-5082} \textperiodcentered\ 
+  \github[ice1000]{https://github.com/ice1000}
+  % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}
+}
+
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{宾夕法尼亚州州立大学}, 美国}{2018.8 -- 现在}
+  专业：计算机科学，预计毕业日期：2022.6
+
+\section{\faUsers\ 工作经历}
+\datedsubsection{\textbf{前海源伞}, 深圳, 中国}{2018.2 -- 2018.7}
+\role{实习}{编译器前端，IDE 插件开发}
+\begin{itemize}
+  \item 负责 pinpoint 分析器的 IntelliJ/CLion/Eclipse 工具集成，协助开发 SonarQube 插件
+  \item 编写了一个多线程的跨 Java/Kotlin 的源代码索引工具，索引 hadoop 仅需 4 分钟
+  \item 学到了很多 Linux 编程和 clang/llvm 相关的知识
+\end{itemize}
+
+\datedsubsection{\textbf{PingCAP}, 远程}{2018.8 -- 现在}
+\role{实习}{TiKV 组}
+\begin{itemize}
+  \item 改进各种 TiKV 依赖的库，如优化
+    \href{https://docs.rs/crate/grpcio} {grpcio}
+    的内存性能，增加
+    \href{https://docs.rs/crate/procinfo} {procinfo}
+    的功能
+\end{itemize}
+
+\section{\faGithubAlt\ 个人项目}
+% \datedsubsection{\textbf{DevKt}}{\url{https://icela.github.io/}}
+% % \role{Kotlin, C\#, Racket, Ruby}{发起者和 Kotlin/C\#/Ruby 版本的主维护者}
+% 一个跨语言、易使用的游戏引擎系列。
+% \begin{itemize}
+%   % \item 易于使用，仅需实现生命周期方法，然后调用非常方便的 API 。
+%   % \item 易于安装，基于各语言内置的 GUI 框架。
+%   \item 基于生命周期方法和工具 API ，并基于各语言内置的 GUI 框架，易于安装。
+%   \item 使用 GitHub 的 issue 和 milestone 功能作为任务和版本管理工具，有完善的改动记录和文档。
+%   \item 提供一个基于 JavaFX 的拖拽式可视化设计器，所见即所得，可以生成各种语言的代码。
+% \end{itemize}
+
+\datedsubsection{\textbf{DevKt}}{\url{https://github.com/ice1000/dev-kt}}
+跨平台轻量级代码编辑器兼 Kotlin IDE。
+\begin{itemize}
+  \item 内置 Java/Kotlin 的高亮、补全，其他语言可以借助插件（可移植自 JetBrains IDE）做到同样的支持。 \\
+    对 Kotlin 有额外的编译运行支持。
+  \item 架构灵活，编辑器上层逻辑和 UI 框架彻底解藕，易于向其他 UI 框架移植。
+  \item 提供细粒度的高亮颜色和快捷键设置，设置可以热更新。
+\end{itemize}
+
+\datedsubsection{\textbf{Lice 语言}}{\url{https://github.com/lice-lang/lice}}
+% \role{Kotlin, Java}{发起者和主维护者}
+高度可扩展的解释型程序语言，运行在 JVM 上。
+\begin{itemize}
+  \item 支持 lambda 和 惰性求值 (call by need) / 正则序求值 (call by name) / 严格求值 (call by value)。
+  \item 运行速度约为 Java (Hotspot 8u151) 的二十分之一，提供 Java 交互和脚本引擎支持。
+  \item 提供支持 GHCi 风格的代码补全、彩色输出的命令行交互式解释器和支持基于语义的高亮、补全、重命名、 \\
+    定义跳转、求值替换、快速修复等功能的 JetBrains IDE 插件。
+\end{itemize}
+
+\datedsubsection{\textbf{Julia-IntelliJ}}{\url{https://github.com/ice1000/julia-intellij}}
+JetBrains IDE 的 Julia 插件，支持全线 JetBrains 产品。
+\begin{itemize}
+  \item 支持基于语义的高亮、错误检查、快速修复、定义跳转、参数提示、补全、针对 Unicode 字符的特殊输入。
+  \item 集成 Markdown 插件高亮文档字符串，提供 REPL、SciView（展示 Plot 库的输出） 支持
+\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+%% \section{\faHeartO\ 成就}
+%% \datedline{}{Aug. 2017}
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.25ex]
+  \item \textbf{编程语言}:
+    \textbf{泛语言开发者}（编程不受特定语言限制），
+    且尤其熟悉 Java/Kotlin/Rust/C\#/Agda/Haskell，
+    较为熟悉 Dart/C++/F\#/F$\star$ (均不分先后)
+
+  % compiler theories
+  \item \textbf{编译原理}:
+    熟练使用各种 Parser Generator/Combinator，理解 CPS 和 ANF，
+    学习过依赖类型的理论（如 Luo's UTT，Martin-Löf 类型论）
+    以及它们在编程语言中的实现
+
+  % language Kotlin
+  \item \textbf{Kotlin/Java}:
+    \textbf{2 年开发经验}，
+    \textbf{4} 个项目被
+    \href{https://kotlin.link/?q=ice} {Awesome Kotlin}
+    收录，熟悉 JNI 编程、Gradle 构建工具，
+    有使用 Kotlin 编译器分析 Java 代码的经验
+
+  \item \textbf{形式验证}:
+    掌握依赖类型、（余）代数和 Curry-Howard 同构，
+    目前正在学习同伦类型论和 Cubical 类型论，
+    熟悉 Idris, Agda (\textbf{1 年}使用经验，开发组成员之一)
+    和 F$\star$ 编程语言
+    \subitem 读过代码的项目： Agda, Idris, miniagda, Mini-TT
+
+  \item \textbf{JetBrains MPS}:
+    \textbf{1 年开发经验}，
+    理解\textbf{面向语言编程}的概念和应用
+
+  \item \textbf{IDE 工具开发}:
+    \textbf{2 年开发经验}，
+    熟悉 IntelliJ 平台的基础设施和整体架构（开发了
+      \href{https://plugins.jetbrains.com/plugin/10413-julia}
+           {Julia 插件} 和很多其他插件），
+    也了解 Eclipse/SonarQube 的插件开发
+
+  % platforms I am familiar with  
+  \item \textbf{移动开发}:
+    \textbf{2 年开发经验}，
+    Android (Java, Kotlin), Fuchsia (Flutter)
+
+  \item \textbf{开发工具}:
+    能适应任何编辑器/操作系统，平常在 Ubuntu 下使用 JetBrains IDE、Emacs，
+    有使用 YouTrack、Jira、GitHub、BitBucket、Coding.net、Tower 等团队协作工具的经验
+\end{itemize}
+
+% \section{\faHeartO\ Honors and Awards}
+% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
+% \datedline{Other awards}{2015}
+
+\section{\faInfo\ 其他}
+\begin{itemize}[parsep=0.25ex]
+  \item 博客: \url{https://ice1000.org/} 部分翻译为英语
+  \item Literate Agda 博客: \url{https://ice1000.org/lagda/} 使用了我改进过的 Agda 文学编程模式
+  \item Bintray: \url{https://bintray.com/ice1000} 发布了一些好用的 JVM 库
+  \item IntelliJ 插件开发者主页: \url{https://plugins.jetbrains.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb}
+  \item 我写的一些关于形式验证的书： \url{https://github.com/ice1000/Books}
+  \item 开源贡献: \url{https://ice1000.org/opensource-contributions/} \\
+    向 \textit{Microsoft, JetBrains, Ruby, Dropbox, PingCAP, TiKV} 等组织，
+    \textit{agda, imgui, shields.io, intellij-solidity, IntelliJ-EmmyLua,
+      intellij-haskell} 等项目提交过功能性的 pull request
+  \item StackOverflow: \url{https://stackoverflow.com/users/7083401/}
+    3000+ 声誉，同时也在\href{https://stackexchange.com/users/9532102/} {其他 StackExchange 子站}活跃
+  \item 语言: English - 熟练 (托福 100)，汉语 - 母语水平
+  % https://raw.githubusercontent.com/ice1000/resume/master/resume-cn.pdf
+  \item 获取此简历的最新版本: \url{https://tinyurl.com/ya4urea8}
+  \item 在
+    \href{https://www.codewars.com/users/ice1000} {CodeWars}
+    上，以 Haskell 为主，达到 \textbf{1 kyu}，全站排名 \#37
+  \item 很喜欢交朋友
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
