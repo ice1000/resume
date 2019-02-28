@@ -10,7 +10,7 @@
 *.aux
 *.ilg
 *.ind
-
+*.out
 .idea/
 
 ## Emacs ##
