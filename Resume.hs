@@ -113,7 +113,7 @@ devKt = paragraph
     , en "via plugins (transplantable from JetBrains IDE's)."
     , en "Has extra build \\& run support for Kotlin."
 
-    , cn "\\item 架构灵活，编辑器上层逻辑和 UI 框架彻底解藕，易于向其他 UI 框架移植。"
+    , cn "\\item 架构灵活，编辑器上层逻辑和 UI 框架彻底解耦，易于向其他 UI 框架移植。"
     , en "\\item Flexible architecture, decoupled high-level logic with UI, migration to other UI frameworks is easy."
 
     , cn "\\item 提供细粒度的高亮颜色和快捷键设置，设置可以热更新。"
