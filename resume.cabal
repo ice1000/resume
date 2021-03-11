@@ -1,0 +1,14 @@
+cabal-version:       >=1.10
+name:                resume
+version:             114.514.1919.810
+author:              ice1000
+maintainer:          ice1000kotlin@foxmail.com
+build-type:          Simple
+extra-source-files:  README.md
+
+executable resume-gen
+  main-is:          Main.hs
+  other-modules:    TeX, Resume
+  build-depends:    base >=4.13, mtl >=2.0
+  hs-source-dirs:   .
+  default-language: Haskell2010
