@@ -13,9 +13,9 @@ Then:
 
 ```bash
 # Generate the TeX files
-runghc Resume.hs en >> latex/resume.tex
-runghc Resume.hs cn >> latex/resume-cn.tex
-runghc Resume.hs elab >> latex/resume-elab.tex
+runghc Main.hs en >> latex/resume.tex
+runghc Main.hs cn >> latex/resume-cn.tex
+runghc Main.hs elab >> latex/resume-elab.tex
 
 # Build the TeX files
 cd latex
