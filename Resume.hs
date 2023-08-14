@@ -24,7 +24,7 @@ plct = paragraph
 
 singularityData :: Resume
 singularityData = paragraph
-  [ datedSection2 (date "2022" "7" ~~ present) $ paragraph
+  [ datedSection2 (date "2022" "7" ~~ date "2023" "7") $ paragraph
     [ cn "\\textbf{北京奇点无限数据科技有限公司}, 远程"
     , en "\\textbf{RisingWave Labs}, Remote"
     ]

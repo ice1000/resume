@@ -25,6 +25,10 @@ education = section "教育经历" "Education"
   , en $ "Minor in Mathematics,"
   , cn $ "副专业：数学,"
   , pure gpa
+  , datedSection2 (date "2023" "08" ~~ present) $ paragraph
+    [ en "Ph.D. in Computer Science at \\textbf{Carnegie Mellon University}, PA, US"
+    , cn "\\textbf{卡内基梅隆大学}，计算机科学专业，博士，美国"
+    ]
   ] where
     gpa = "GPA 3.28/4.00"
 
