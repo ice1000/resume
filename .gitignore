@@ -1,21 +1,3 @@
-## Haskell ##
-
-dist-*/
-
-## LaTeX ##
-
-*.bbl
-*.blg
-*.log
-*.gz
-*.bak
-*.html
-*.aux
-*.ilg
-*.ind
-*.out
-*.fdb_latexmk
-
 ## Editors ##
 
 .idea/

@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Created by ice1000 at 2017/3/26
+# Rewritten by ice1000 at 2023/8/16
 #
 
 echo "======generating LaTeX========"
