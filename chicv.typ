@@ -8,15 +8,15 @@
 
 #import "fontawesome.typ": *;
 #let iconlink(
-  uri, text: 0, icon: link-icon) = {
-  if text == 0 {
+  uri, text: "", icon: link-icon) = {
+  if text == "" {
     text = uri
   }
   link(uri)[#fa[#icon] #text]
 }
 
 #let githublink(userRepo) = {
-  iconlink("https://github.com/" + userRepo, text: "", icon: github)
+  link("https://github.com/" + userRepo)[#fa[#github]]
 }
 
 #let cventry(

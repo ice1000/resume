@@ -176,39 +176,65 @@
   }
 
   let aya = {
-//     aya :: Resume
-// aya = paragraph
-//   [ datedSection (github "aya-prover/aya-dev") (bold "Aya Prover") $ paragraph
-//     [ cn "实用的依值类型系统实现（职位：项目组长）"
-//     , en "Practical implementation of a dependent type system (role: project leader)"
-//     ]
-
-//   , itemize
-//     [ cn "\\item 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。"
-//     , en $ "\\item Supports dependent types, dependent pattern matching with confluence check for overlapping cases, "
-//         ++ "higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments."
-
-//     , cn "\\item 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 \\LaTeX{}。支持 VSCode 的语言服务器协议。二进制分发基于 jlink 和 GraalVM 镜像。"
-//     , en $ "\\item Supports visualization of the type checking traces and exporting elaboration result to HTML or \\LaTeX{}. "
-//         ++ "Supports LSP in VSCode. Binaries releases are based on jlink and GraalVM native-image."
-//     ]
-//   ]
     translate(
       en: cventry(
-        tl: [*Aya Prover*],
+        tl: [*Aya Prover*, Practical Implementation of Dependent Types (role: project leader)],
         tr: githublink("aya-prover/aya-dev"),
-        bl: [Practical Implementation of Dependent Types (role: project leader)],
       )[
       - Supports dependent types, dependent pattern matching with confluence check for overlapping cases, higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments.
       - Supports visualization of the type checking traces and exporting elaboration result to HTML or LaTeX. Supports LSP in VSCode. Binaries releases are based on jlink and GraalVM native-image.
       ],
       zh: cventry(
-        tl: [*Aya Prover*],
+        tl: [*Aya Prover*, 实用的依值类型系统实现（职位：项目组长）],
         tr: githublink("aya-prover/aya-dev"),
-        bl: [实用的依值类型系统实现（职位：项目组长）],
       )[
       - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。
       - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 LaTeX。支持 VSCode 的语言服务器协议。二进制分发基于 jlink 和 GraalVM 镜像。
+      ],
+    )
+  }
+
+  let arendVSCode = {
+    translate(
+      en: cventry(
+        tl: [*VSCode extension for Arend*, Arend language server, based on lsp4j and Arend compiler's internals],
+        tr: githublink("ice1000/vscode-arend"),
+      )[],
+      zh: cventry(
+        tl: [*VSCode extension for Arend*, Arend 语言服务实现，基于 lsp4j 框架和 Arend 编译器内部接口。],
+        tr: githublink("ice1000/vscode-arend"),
+      )[],
+    )
+  }
+
+  let arendIO = {
+    translate(
+      en: cventry(
+        tl: [*Arend IO*, Experimental IO library for Arend, implements unsafePerformIO and simple IO actions],
+        tr: githublink("ice1000/arend-io"),
+      )[],
+      zh: cventry(
+        tl: [*Arend IO*, 实验性 Arend IO 库，实现了 unsafePerformIO 和简单的 IO 操作。],
+        tr: githublink("ice1000/arend-io"),
+      )[],
+    )
+  }
+
+  let intellijPest = {
+    translate(
+      en: cventry(
+        tl: [*IntelliJ Pest*, Pest language plugin for IntelliJ Platform],
+        tr: githublink("pest-parser/intellij-pest"),
+      )[
+      - Semantic-based highlighting, completion, navigation, definition extraction/inlining, and Rust plugin integration.
+      - Provides live preview -- test grammar files by dynamically highlighting user code according to the grammar on the fly. These highlighted code could be exported to HTML.
+      ],
+      zh: cventry(
+        tl: [*IntelliJ Pest*, 基于 IntelliJ Platform 的 Pest 文法语言插件],
+        tr: githublink("pest-parser/intellij-pest"),
+      )[
+      - 支持基于语义的高亮、错误检查、定义跳转、变量补全、提取定义、内联定义以及与 Rust 插件集成。
+      - 提供实时高亮功能——可根据语法定义为用户代码动态提供高亮以测试语法定义文件，并支持导出 HTML。
       ],
     )
   }
@@ -230,6 +256,11 @@
 
   translate(en: [== Related Projects], zh: [== 项目经历])
   aya
+  intellijPest
+  noSimple[
+    #arendVSCode
+    #arendIO
+  ]
 }
 
-#runReader(2)
+#runReader(1)
