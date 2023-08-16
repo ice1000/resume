@@ -8,11 +8,15 @@
 
 #import "fontawesome.typ": *;
 #let iconlink(
-  uri, text: "", icon: link-icon) = {
-  if text == "" {
+  uri, text: 0, icon: link-icon) = {
+  if text == 0 {
     text = uri
   }
   link(uri)[#fa[#icon] #text]
+}
+
+#let githublink(userRepo) = {
+  iconlink("https://github.com/" + userRepo, text: "", icon: github)
 }
 
 #let cventry(
@@ -39,7 +43,7 @@
   show heading.where(
     level: 1
   ): set text(
-    size: 22pt,
+    size: 18pt,
     weight: "light",
   )
 

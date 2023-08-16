@@ -110,7 +110,7 @@
       en: cventry(
         tl: [*JetBrains Research*, Remote],
         tr: jetbrains-date,
-        bl: [_HoTT and Dependent Types_, Theorem Prover Development],
+        bl: [_HoTT and Dependent Types_, Interactive Theorem Prover Development],
       )[
       #noSimple[- Used features like gradle composite build and buildSrc to reduce build time and improve automation.]
       - Improved the language/IDE, such as sections, hygiene macros, `Fin` type with elaborative subtyping, semantic highlighting, etc.
@@ -123,7 +123,7 @@
       zh: cventry(
         tl: [*JetBrains Research*, 远程],
         tr: jetbrains-date,
-        bl: [同伦类型论与依值类型, 定理证明器 Arend 开发实习],
+        bl: [同伦类型论与依值类型, 交互式定理证明器 Arend 开发实习],
       )[
       - 使用 gradle composite build 和 buildSrc 等复杂的构建功能改善编译速度、提高构建自动化程度。
       - 实现了一些语言特性和 IDE 插件功能，如 section 语法、卫生宏、优化的 `Fin` 类型、语义高亮等。
@@ -141,7 +141,7 @@
         tr: aya-date,
         bl: [_Implementation of Dependent Types_, Opensource Maintainer],
       )[#noSimple(
-        simple: [- Leading a team to explore modern techniques in type theory implementation.]
+        // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
       - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, cubical type theory, termination check of recursive functions, etc.
       ]],
@@ -175,9 +175,51 @@
     )
   }
 
-  translate(en: [= Tesla Zhang], zh: [= 张寅森])
+  let aya = {
+//     aya :: Resume
+// aya = paragraph
+//   [ datedSection (github "aya-prover/aya-dev") (bold "Aya Prover") $ paragraph
+//     [ cn "实用的依值类型系统实现（职位：项目组长）"
+//     , en "Practical implementation of a dependent type system (role: project leader)"
+//     ]
+
+//   , itemize
+//     [ cn "\\item 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。"
+//     , en $ "\\item Supports dependent types, dependent pattern matching with confluence check for overlapping cases, "
+//         ++ "higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments."
+
+//     , cn "\\item 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 \\LaTeX{}。支持 VSCode 的语言服务器协议。二进制分发基于 jlink 和 GraalVM 镜像。"
+//     , en $ "\\item Supports visualization of the type checking traces and exporting elaboration result to HTML or \\LaTeX{}. "
+//         ++ "Supports LSP in VSCode. Binaries releases are based on jlink and GraalVM native-image."
+//     ]
+//   ]
+    translate(
+      en: cventry(
+        tl: [*Aya Prover*],
+        tr: githublink("aya-prover/aya-dev"),
+        bl: [Practical Implementation of Dependent Types (role: project leader)],
+      )[
+      - Supports dependent types, dependent pattern matching with confluence check for overlapping cases, higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments.
+      - Supports visualization of the type checking traces and exporting elaboration result to HTML or LaTeX. Supports LSP in VSCode. Binaries releases are based on jlink and GraalVM native-image.
+      ],
+      zh: cventry(
+        tl: [*Aya Prover*],
+        tr: githublink("aya-prover/aya-dev"),
+        bl: [实用的依值类型系统实现（职位：项目组长）],
+      )[
+      - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。
+      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 LaTeX。支持 VSCode 的语言服务器协议。二进制分发基于 jlink 和 GraalVM 镜像。
+      ],
+    )
+  }
+
+  // Start of the document
+
+  translate(en: [= #smallcaps[Tesla Zhang]], zh: [= 张寅森])
 
   [ice1000kotlin\@gmail.com $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: github)]
+
+  edu
 
   translate(en: [== Work Experience], zh: [== 工作经历])
   jetbrains
@@ -185,6 +227,9 @@
   risingwave
   sbrella
   pingcap
+
+  translate(en: [== Related Projects], zh: [== 项目经历])
+  aya
 }
 
 #runReader(2)
