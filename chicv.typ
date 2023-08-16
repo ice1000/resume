@@ -6,8 +6,12 @@
   v(-10pt)
 }
 
+#import "fontawesome.typ": *;
 #let iconlink(
   uri, text: "", icon: link-icon) = {
+  if text == "" {
+    text = uri
+  }
   link(uri)[#fa[#icon] #text]
 }
 
