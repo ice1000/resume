@@ -44,7 +44,7 @@
   )
 
   let the-font = (
-    "Linux Libertine",
+    "Palatino Linotype",
     "Source Han Serif SC",
     "Source Han Serif",
   )
