@@ -120,17 +120,17 @@
       #noSimple(
         simple: [- Created a debugger for inspecting bidirectional type-checking and REPL in both CLI and IntelliJ IDEA.]
       )[
-        - Created an extensible REPL framework, provided implementations in CLI (with contextual completion) and in IntelliJ IDEA (interacts with the opened project, supports completion, highlighting and goto definition).
+        - Created an extensible REPL engine, provided implementations in CLI (with contextual completion using `jline3`) and in IntelliJ IDEA (interacts with the opened project, supports completion, highlighting and goto definition).
         - Designed and implemented an expression type-checking debugger that supports step-into and displays local context and expressions as stack frames.
       ]],
       zh: cventry(
-        tl: [*JetBrains Research*，远程],
+        tl: [*捷并思研究院*，远程],
         tr: jetbrains-date,
-        bl: [同伦类型论与依值类型, 交互式定理证明器 Arend 开发实习],
+        bl: [同伦类型论与依值类型，交互式定理证明器 Arend 开发实习],
       )[
       - 使用 gradle composite build 和 buildSrc 等复杂的构建功能改善编译速度、提高构建自动化程度。
       - 实现了一些语言特性和 IDE 插件功能，如 section 语法、卫生宏、优化的 `Fin` 类型、语义高亮等。
-      - 开发了一个可扩展的 REPL 框架，并提供命令行实现（可基于上下文补全）、IntelliJ IDEA 实现（可与打开的项目进行交互，支持补全、高亮和跳转）。
+      - 开发了一个可扩展的 REPL 引擎，并提供命令行实现（可通过上下文补全，使用 `jline3` 框架）、IntelliJ IDEA 实现（可与打开的项目进行交互，支持补全、高亮和跳转）。
       - 设计并实现了一个表达式类型检查的调试器，支持显示局部变量和表达式栈帧，同时支持单步调试。
       ],
     )
@@ -149,9 +149,9 @@
       - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, Cartesian cubical type theory, termination check of recursive functions, etc.
       ]],
       zh: cventry(
-        tl: [*PLCT 实验室*, 远程],
+        tl: [*PLCT 实验室*，远程],
         tr: aya-date,
-        bl: [依值类型系统实现, 开源维护者],
+        bl: [依值类型系统实现，开源维护者],
       )[- 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式合一化、依值模式匹配的检查、Cubical 类型论、递归函数停机性检查等。],
     )
   }
@@ -165,10 +165,10 @@
         bl: [_Streaming Database_, Developer Intern],
       )[
       #noSimple[- Proposed an overhaul of the query plan AST design, which better facilitates the enum feature implemented in the Rust language.]
-      - Implemented a pretty printing framework for trees with line fitting and Unicode art. Integrated into SQL explain.
+      - Implemented a pretty printing framework for trees with smart line fitting and Unicode art. Integrated into SQL explain.
       ],
       zh: cventry(
-        tl: [*北京奇点无限数据科技有限公司*, 远程],
+        tl: [*北京奇点无限数据科技有限公司*，远程],
         tr: risingwave-date,
         bl: [数据库开发, 实习],
       )[
@@ -185,14 +185,14 @@
         tr: githublink("aya-prover/aya-dev"),
       )[
       - Supports dependent types, dependent pattern matching with confluence check for overlapping cases, higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments.
-      - Supports visualization of the type checking traces and exporting elaboration result to HTML or LaTeX. Supports LSP in VSCode. Binaries releases are based on jlink and GraalVM native-image.
+      - Supports visualization of the type checking traces and exporting elaboration result to HTML or LaTeX. Supports LSP in VSCode. Binaries releases are built with jlink and GraalVM native-image.
       ],
       zh: cventry(
-        tl: [*Aya Prover*, 实用的依值类型系统实现（职位：项目组长）],
+        tl: [*Aya Prover*，实用的依值类型系统实现（职位：项目组长）],
         tr: githublink("aya-prover/aya-dev"),
       )[
       - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。
-      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 LaTeX。支持 VSCode 的语言服务器协议。二进制分发基于 jlink 和 GraalVM 镜像。
+      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 LaTeX。支持 VSCode 的语言服务器协议。二进制分发使用 jlink 和 GraalVM 原生镜像构建。
       ],
     )
   }
@@ -204,7 +204,7 @@
         tr: githublink("ice1000/vscode-arend"),
       )[],
       zh: cventry(
-        tl: [*VSCode extension for Arend*, Arend 语言服务实现，基于 lsp4j 框架和 Arend 编译器内部接口。],
+        tl: [*VSCode extension for Arend*，Arend 语言服务实现，基于 lsp4j 框架和 Arend 编译器内部接口。],
         tr: githublink("ice1000/vscode-arend"),
       )[],
     )
@@ -217,7 +217,7 @@
         tr: githublink("ice1000/arend-io"),
       )[],
       zh: cventry(
-        tl: [*Arend IO*, 实验性 Arend IO 库，实现了 unsafePerformIO 和简单的 IO 操作。],
+        tl: [*Arend IO*，实验性 Arend IO 库，实现了 unsafePerformIO 和简单的 IO 操作。],
         tr: githublink("ice1000/arend-io"),
       )[],
     )
@@ -291,7 +291,7 @@
   let typeTheory = {
     translate(
       en: [- Type Theory: understand Martin-Löf type theory, coinduction, HoTT, and Cubical, familiar with Idris, Agda (*3 years* of experience, contributor), Arend and some Lean/F★/Coq.],
-      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris, Agda（*3 年经验*，开发组成员），Arend 和一些 Lean/F★/Coq。]
+      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*3 年经验*，开发组成员），Arend 和一些 Lean/F★/Coq。]
     )
   }
 
@@ -380,7 +380,7 @@
 
   translate(en: [= #smallcaps[Tesla Zhang]], zh: [= 张寅森])
 
-  [ice1000kotlin\@gmail.com $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: github)]
+  [#link("mailto:ice1000kotlin@gmail.com")[ice1000kotlin\@gmail.com] $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: github)]
 
   edu
 
