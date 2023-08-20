@@ -66,7 +66,7 @@
       - Learned a lot about Linux programming and the Clang/LLVM codebase.
       ]],
       zh: cventry(
-        tl: [深圳市前海源伞科技有限公司，深圳，中国],
+        tl: [*深圳市前海源伞科技有限公司*，深圳，中国],
         tr: sbrella-date,
         bl: [静态分析，编译器前端，IDE 插件开发实习],
       )[#noSimple[
@@ -93,11 +93,11 @@
       - Learned a lot about Rust programming, distributed system, working remotely, and databases.
       ]],
       zh: cventry(
-        tl: [北京平凯星辰科技发展有限公司，远程],
+        tl: [*北京平凯星辰科技发展有限公司*，远程],
         tr: pingcap-date,
         bl: [分布式存储系统，TiKV 实习 -- Ecosystem 小组],
       )[#noSimple[
-      - 改进各种 TiKV 的外部依赖库，如优化 #grpcio 的内存性能，增加 #procinfo 的功能。
+      - 改进各种 TiKV 的外部依赖库，如优化 #grpcio 的内存性能，改善 #procinfo 的功能。
       - 协助迁移 TiKV 及其 Raft 实现所使用的 #protobuf 库。
       - 学到了很多 Rust 编程、分布式系统、远程工作和数据库相关的知识。
       ]],
@@ -121,7 +121,7 @@
         - Designed and implemented an expression type-checking debugger that supports step-into and displays local context and expressions as stack frames.
       ]],
       zh: cventry(
-        tl: [*JetBrains Research*, 远程],
+        tl: [*JetBrains Research*，远程],
         tr: jetbrains-date,
         bl: [同伦类型论与依值类型, 交互式定理证明器 Arend 开发实习],
       )[
@@ -143,7 +143,7 @@
       )[#noSimple(
         // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
-      - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, cubical type theory, termination check of recursive functions, etc.
+      - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, Cartesian cubical type theory, termination check of recursive functions, etc.
       ]],
       zh: cventry(
         tl: [*PLCT 实验室*, 远程],
@@ -161,7 +161,7 @@
         tr: risingwave-date,
         bl: [_Streaming Database_, Developer Intern],
       )[
-      #noSimple[- Proposed an overhaul of the query plan AST design, which better facilitates the enum feature implemented in the Rust programming language.]
+      #noSimple[- Proposed an overhaul of the query plan AST design, which better facilitates the enum feature implemented in the Rust language.]
       - Implemented a pretty printing framework for trees with line fitting and Unicode art. Integrated into SQL explain.
       ],
       zh: cventry(
@@ -239,6 +239,83 @@
     )
   }
 
+  let devTools = {
+    let tools = ("YouTrack", "Jira", "GitHub", "BitBucket", /* "Coding.net", "Tower", */ "Slack", "JetBrains Space")
+  //   paragraph
+  // [ itemTeX "开发工具" "Development Tool"
+  // , cn "能适应任何编辑器/操作系统，平常在 Ubuntu 下使用 JetBrains IDE、Emacs，"
+  // , cn $ "有使用 " ++ intercalate "、" tools ++ " 等团队协作工具的经验。"
+  // , en "can adapt to any editors/OSs, usually use JetBrains IDEs and Emacs in"
+  // , simple "Ubuntu."
+  // , elab "Ubuntu, have experience with team collaboration tools like "
+  // , elab $ intercalate ", " tools ++ "."
+  // ]
+  }
+
+  let misc = {
+    let intellij = "https://plugins.jetbrains.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
+    let osc      = link("https://ice1000.org/opensource-contributions")
+    // bintray  = "https://bintray.com/ice1000"
+    let crates   = "https://crates.io/users/ice1000"
+    // What to do with this?
+    // let personal = "https://personal.psu.edu/yqz5714"
+    let seRep    = "6000+"
+    let stackex(e) = link("https://stackexchange.com/users/9532102")[#e]
+    // https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
+    let enSimple = link("https://tinyurl.com/y8xdlfug")
+    // https://raw.githubusercontent.com/ice1000/resume/master/resume-elab.pdf
+    let enElab   = link("https://tinyurl.com/y2v59t36")
+    // https://raw.githubusercontent.com/ice1000/resume/master/resume-cn.pdf
+    let cnLink   = link("https://tinyurl.com/ya4urea8")
+    let codewars = link("https://www.codewars.com/users/ice1000")[CodeWars]
+    let cwLevel  = "\\textbf{1 dan}"
+    let cwPerc   = "0.020\\%"
+    let cwRank   = "\\#111"
+    let projects = [*agda, Arend, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, intellij-rust, TeXiFy-IDEA, rust-analyzer*]
+
+    translate(en: noSimple(simple: [
+      - Profile links (please use a PDF reader with hyperlink support):
+        #link(crates)[Crates.io],
+        #link(intellij)[IntelliJ] Marketplace
+    ])[
+      - Crates.io: #link(crates), publishing interesting Rust libraries
+      - IntelliJ Marketplace: #link(intellij)
+    ], zh: [
+      - 相关个人页面链接（请使用支持超链接的 PDF 阅读器）：#link(crates)[Crates.io] 主页，#link(intellij)[IntelliJ] 插件市场主页
+    ])
+    translate(
+      en: [- Languages: English - fluent (TOEFL 100), Chinese - native speaker],
+      zh: [- 语言：English - 熟练 (托福 100)，汉语 - 母语水平]
+    )
+    translate(
+      en: [
+        - Open-source contributions: #osc, #noSimple[member of JuliaEditorSupport, agda, pest-parser, EmmyLua, arend-lang and more,]
+          contributed to #projects and other projects #noSimple[(apart from organization ones)]
+      ],
+      zh: [- 开源贡献: #osc，向 #projects 等项目贡献过代码]
+    )
+    [- #link("https://stackoverflow.com/users/7083401/ice1000")[StackOverflow]: #seRep
+      #translate(
+        en: [reputation, also active on #stackex("other StackExchange sites")],
+        zh: [声誉，同时也在#stackex("其他 StackExchange 子站")活跃]
+      )
+    ]
+    translate(
+      en: [
+        - Latest revision of this resume: one-page version #enSimple, complete version: #enElab
+        - #noSimple[Get the Chinese version of this resume: #cnLink]
+      ],
+      zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）: #enSimple]
+    )
+    translate(
+      en: [
+        - #cwLevel on #codewars, ranked #cwRank on the whole site (Top #cwPerc),
+          #noSimple[solving and making new coding challenges] primarily in Haskell, Agda, and Idris
+      ],
+      zh: [- 在 #codewars 上，以 Haskell、Agda 和 Idris 为主，达到 #cwLevel，全站排名 #cwRank（前 #cwPerc）]
+    )
+  }
+
   // Start of the document
 
   translate(en: [= #smallcaps[Tesla Zhang]], zh: [= 张寅森])
@@ -261,6 +338,11 @@
     #arendVSCode
     #arendIO
   ]
+
+  translate(en: [== Skills], zh: [== 技能])
+
+  translate(en: [== Misc], zh: [== 其它])
+  misc
 }
 
 #runReader(1)
