@@ -4,14 +4,14 @@
 #let EnglishFull = 1
 #let Simplified = 2
 #let runReader(mode) = {
-  let translate(zh: "", en: "") = {
+  let translate(zh: [], en: []) = {
     if mode == Chinese {
       zh
     } else {
       en
     }
   }
-  let noSimple(simple: "", content) = {
+  let noSimple(simple: [], content) = {
     if mode == Simplified {
       simple
     } else {
@@ -22,6 +22,10 @@
   let translate-date(month, year) = translate(
     zh: [#year 年 #month 月],
     en: [#months.at(month - 1), #year]
+  )
+  let current = translate(
+    zh: [至今],
+    en: [Present]
   )
 
   let edu = {
@@ -39,7 +43,7 @@
       )[副专业：数学, GPA #gpa/4.00],
     )
 
-    let cmu-date = [#translate-date(8, 2023) -- Current]
+    let cmu-date = [#translate-date(8, 2023) -- #current]
     translate(
       en: cventry(
         tl: [Ph.D. in Computer Science at *Carnegie Mellon University*, PA, US],
@@ -133,7 +137,7 @@
   }
 
   let plct = {
-    let aya-date = [#translate-date(12, 2020) -- Current]
+    let aya-date = [#translate-date(12, 2020) -- #current]
     translate(
       en: cventry(
         tl: [*PLCT Lab*, Remote],
@@ -246,7 +250,8 @@
   }
   let compiler = {
     translate(en: [
-      - Compiler: understand various program representations such as CFG, ANF, (P)HOAS, etc. and normalization by evaluation. #noSimple[Familiar with most parser generators, understand layout syntax parsing.]
+      - Compiler: understand various program representations such as CFG, ANF, (P)HOAS, etc. and normalization by evaluation.
+        #noSimple[Familiar with most parser generators, understand layout syntax parsing.]
     ], zh: [
       - 编译器：理解多种程序表示，例如 CFG, ANF, (P)HOAS 等，理解语义正规化（NbE）。熟悉大部分 parser 生成器，理解基于布局的语法解析。
     ])
@@ -399,4 +404,12 @@
 
   translate(en: [== Misc], zh: [== 其它])
   misc
+
+  // https://github.com/typst/typst/issues/1462
+  {
+    set text(size: 0pt)
+    cite("SIT")
+  }
+  translate(en: [== Publications], zh: [== 论文发表])
+  bibliography("pub.bib", title: none)
 }
