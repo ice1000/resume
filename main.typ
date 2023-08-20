@@ -1,6 +1,5 @@
 #import "chicv.typ": *;
 
-#show: chicv
 #let Chinese = 0
 #let EnglishFull = 1
 #let Simplified = 2
@@ -241,15 +240,70 @@
 
   let devTools = {
     let tools = ("YouTrack", "Jira", "GitHub", "BitBucket", /* "Coding.net", "Tower", */ "Slack", "JetBrains Space")
-  //   paragraph
-  // [ itemTeX "开发工具" "Development Tool"
-  // , cn "能适应任何编辑器/操作系统，平常在 Ubuntu 下使用 JetBrains IDE、Emacs，"
-  // , cn $ "有使用 " ++ intercalate "、" tools ++ " 等团队协作工具的经验。"
-  // , en "can adapt to any editors/OSs, usually use JetBrains IDEs and Emacs in"
-  // , simple "Ubuntu."
-  // , elab "Ubuntu, have experience with team collaboration tools like "
-  // , elab $ intercalate ", " tools ++ "."
-  // ]
+    translate(en: [
+      - Tools: editor-agnostic, have experience with team tools like #tools.join(", ") and more.
+    ], zh: [- 开发工具：能适应任何常见编辑器/操作系统，有使用 #tools.join("、") 等团队协作工具的经验。])
+  }
+  let compiler = {
+    translate(en: [
+      - Compiler: understand various program representations such as CFG, ANF, (P)HOAS, etc. and normalization by evaluation. #noSimple[Familiar with most parser generators, understand layout syntax parsing.]
+    ], zh: [
+      - 编译器：理解多种程序表示，例如 CFG, ANF, (P)HOAS 等，理解语义正规化（NbE）。熟悉大部分 parser 生成器，理解基于布局的语法解析。
+    ])
+  }
+  let progLang = {
+    let very = "Java Kotlin Rust C# Agda Haskell Arend"
+    let somehow = "Dart C C++ F# F* Idris Perl MATLAB"
+    translate(en: [
+      - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
+    ], zh: [
+      - 编程语言：泛语言（编程不受特定语言限制），且尤其熟悉 #very，较为熟悉 #somehow（排名均不分先后）。
+    ])
+  }
+  let ideDev = {
+    let pref = "https://plugins.jetbrains.com/plugin/"
+    let julia = link(pref + "10413")[Julia]
+    let dtlc  = link(pref + "12176")[DTLC]
+    let pest  = link(pref + "12046")[Pest]
+    translate(en: [
+      - IDE Tooling: *4 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, etc.), also have experience with Eclipse/SonarQube/VSCode plugin development.
+    ], zh: [
+      - IDE 工具开发：*4 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest 等插件），同时了解 Eclipse/SonarQube/VSCode 的插件开发。
+    ])
+  }
+  let kotlinJava = {
+    translate(
+      en: [- Kotlin/Java: *8 years of experience*, familiar with JNI, Gradle, Kotlin coroutines, and Swing.],
+      zh: [- Kotlin/Java：*8 年开发经验*，熟悉 JNI, Gradle, Kotlin coroutines, Swing。]
+    )
+  }
+  let mobileDev = {
+    translate(
+      en: [- Mobile Development: *2 years of experience*, familiar with Flutter, Android, and iOS.],
+      zh: [- 移动端开发：*2 年开发经验*，熟悉 Flutter, Android, iOS。]
+    )
+  }
+  let typeTheory = {
+    translate(
+      en: [- Type Theory: understand Martin-Löf type theory, coinduction, HoTT, and Cubical, familiar with Idris, Agda (*3 years* of experience, contributor), Arend and some Lean/F★/Coq.],
+      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris, Agda（*3 年经验*，开发组成员），Arend 和一些 Lean/F★/Coq。]
+    )
+  }
+
+  let skills = {
+    progLang
+    compiler
+    kotlinJava
+    typeTheory
+    noSimple[
+      - *JetBrains MPS*: #translate(
+        en: [understand concepts and applications of #link("https://www.jetbrains.com/mps/")[Language-Oriented Programming].],
+        zh: [理解 #link("https://www.jetbrains.com/mps/")[面向语言编程] 的概念和应用。]
+      )
+    ]
+    ideDev
+    noSimple[#mobileDev]
+    devTools
   }
 
   let misc = {
@@ -259,7 +313,7 @@
     let crates   = "https://crates.io/users/ice1000"
     // What to do with this?
     // let personal = "https://personal.psu.edu/yqz5714"
-    let seRep    = "6000+"
+    let seRep    = [6000+]
     let stackex(e) = link("https://stackexchange.com/users/9532102")[#e]
     // https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
     let enSimple = link("https://tinyurl.com/y8xdlfug")
@@ -268,9 +322,9 @@
     // https://raw.githubusercontent.com/ice1000/resume/master/resume-cn.pdf
     let cnLink   = link("https://tinyurl.com/ya4urea8")
     let codewars = link("https://www.codewars.com/users/ice1000")[CodeWars]
-    let cwLevel  = "\\textbf{1 dan}"
-    let cwPerc   = "0.020\\%"
-    let cwRank   = "\\#111"
+    let cwLevel  = [*1 dan*]
+    let cwPerc   = [0.020%]
+    let cwRank   = [\#111]
     let projects = [*agda, Arend, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, intellij-rust, TeXiFy-IDEA, rust-analyzer*]
 
     translate(en: noSimple(simple: [
@@ -303,7 +357,7 @@
     translate(
       en: [
         - Latest revision of this resume: one-page version #enSimple, complete version: #enElab
-        - #noSimple[Get the Chinese version of this resume: #cnLink]
+        #noSimple[- Get the Chinese version of this resume: #cnLink]
       ],
       zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）: #enSimple]
     )
@@ -311,6 +365,7 @@
       en: [
         - #cwLevel on #codewars, ranked #cwRank on the whole site (Top #cwPerc),
           #noSimple[solving and making new coding challenges] primarily in Haskell, Agda, and Idris
+          #noSimple[and some other JVM languages]
       ],
       zh: [- 在 #codewars 上，以 Haskell、Agda 和 Idris 为主，达到 #cwLevel，全站排名 #cwRank（前 #cwPerc）]
     )
@@ -340,9 +395,8 @@
   ]
 
   translate(en: [== Skills], zh: [== 技能])
+  skills
 
   translate(en: [== Misc], zh: [== 其它])
   misc
 }
-
-#runReader(1)
