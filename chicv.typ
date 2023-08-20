@@ -8,8 +8,8 @@
 
 #import "fontawesome.typ": *;
 #let iconlink(
-  uri, text: "", icon: link-icon) = {
-  if text == "" {
+  uri, text: [], icon: link-icon) = {
+  if text == [] {
     text = uri
   }
   link(uri)[#fa[#icon] #text]
@@ -22,15 +22,15 @@
 #let cventry(
   tl: lorem(2),
   tr: "1145/14 - 1919/8/10",
-  bl: "",
-  br: "",
+  bl: [],
+  br: [],
   content
 ) = {
   block(
     inset: (left: 0pt),
     tl + h(1fr) + tr +
     linebreak() +
-    if bl != "" or br != "" {
+    if bl != [] or br != [] {
       bl + h(1fr) + br + linebreak()
     } +
     content
