@@ -138,6 +138,7 @@
 
   let plct = {
     let aya-date = [#translate-date(12, 2020) -- #current]
+    let ntypeCafe = "https://infinity-type-cafe.github.io/ntype-cafe-summer-school"
     translate(
       en: cventry(
         tl: [*PLCT Lab*, Remote],
@@ -146,13 +147,17 @@
       )[#noSimple(
         // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
-      - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, Cartesian cubical type theory, termination check of recursive functions, etc.
+      - Leading a team to explore modern techniques in type theory implementation, such as pattern unification, elimination of dependent pattern matching, Cartesian cubical type theory, termination check of recursive functions, phase distinction between layers of a type theory, etc.
+      - Organized reading activities on design and implementation of type theory, presented several talks in #link(ntypeCafe)[∞-Type Café Summer School on Type Theory] (in Chinese).
       ]],
       zh: cventry(
         tl: [*PLCT 实验室*，远程],
         tr: aya-date,
         bl: [依值类型系统实现，开源维护者],
-      )[- 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式合一化、依值模式匹配的检查、Cubical 类型论、递归函数停机性检查等。],
+      )[
+      - 带领类型小队探索现代化的依值类型实现策略，包括但不限于用到模式合一化、依值模式匹配的检查、Cartesian 立方类型论、递归函数停机性检查、类型论不同层面之间的阶段分离等。
+      - 组织一些关于类型论设计和实现的读书活动以及知识分享，作为讲师参与 #link(ntypeCafe)[∞-Type Café 类型论暑校]。
+      ],
     )
   }
 
@@ -175,6 +180,38 @@
       - 提案重构查询计划语法树的设计以更好地使用 Rust 编程语言的枚举功能。
       - 实现将树状数据使用 Unicode 艺术可视化的算法，会计算行宽并支持智能断行，集成到 SQL explain 中。
       ],
+    )
+  }
+
+  let mcREU = {
+    let reu-date = [#translate-date(5, 2019) -- #translate-date(8, 2019)]
+    let ghLink = githublink("owo-lang/voile-rs")
+    translate(
+      en: cventry(
+        tl: [*Multi-Campus REU*, State College],
+        tr: reu-date,
+      )[
+      - Extensively studied the literature on row polymorphism and record calculus.
+      - Implemented (#ghLink) and formalized a row polymorphic dependent type theory.
+      ],
+      zh: cventry(
+        tl: [*跨校区本科科研活动*，州学院],
+        tr: reu-date,
+      )[- 广泛地调研关于行多态和结构体演算的研究，设计、实现（#ghLink）并形式化了一个相关的依值类型系统。],
+    )
+  }
+
+  let la461 = {
+    let la461-date = [#translate-date(8, 2022) -- #translate-date(12, 2022)]
+    translate(
+      en: cventry(
+        tl: [*Learning Assistant* for Cmpsc 461 (Programming Language Concepts), State College],
+        tr: la461-date,
+      )[],
+      zh: cventry(
+        tl: [*Cmpsc 461 课程助教*（编程语言概念），州学院],
+        tr: la461-date,
+      )[],
     )
   }
 
@@ -233,69 +270,63 @@
       - Provides live preview -- test grammar files by dynamically highlighting user code according to the grammar on the fly. These highlighted code could be exported to HTML.
       ],
       zh: cventry(
-        tl: [*IntelliJ Pest*, 基于 IntelliJ Platform 的 Pest 文法语言插件],
+        tl: [*IntelliJ Pest*，给 IntelliJ Platform 开发的 Pest 文法语言插件],
         tr: githublink("pest-parser/intellij-pest"),
       )[
-      - 支持基于语义的高亮、错误检查、定义跳转、变量补全、提取定义、内联定义以及与 Rust 插件集成。
+      - 支持含语义信息的高亮、错误检查、定义跳转、变量补全、提取定义、内联定义以及与 Rust 插件集成。
       - 提供实时高亮功能——可根据语法定义为用户代码动态提供高亮以测试语法定义文件，并支持导出 HTML。
       ],
     )
   }
 
-  let devTools = {
-    let tools = ("YouTrack", "Jira", "GitHub", "BitBucket", /* "Coding.net", "Tower", */ "Slack", "JetBrains Space")
-    translate(en: [
-      - Tools: editor-agnostic, have experience with team tools like #tools.join(", ") and more.
-    ], zh: [- 开发工具：能适应任何常见编辑器/操作系统，有使用 #tools.join("、") 等团队协作工具的经验。])
-  }
-  let compiler = {
-    translate(en: [
+  let skills = {
+    let devTools = {
+      let tools = ("YouTrack", "Jira", "GitHub", "BitBucket", /* "Coding.net", "Tower", */ "Slack", "JetBrains Space")
+      translate(en: [
+        - Tools: editor-agnostic, have experience with team tools like #tools.join(", ") and more.
+      ], zh: [- 开发工具：能适应任何常见编辑器/操作系统，有使用 #tools.join("、") 等团队协作工具的经验。])
+    }
+    let compiler = translate(en: [
       - Compiler: understand various program representations such as CFG, ANF, (P)HOAS, etc. and normalization by evaluation.
         #noSimple[Familiar with most parser generators, understand layout syntax parsing.]
     ], zh: [
-      - 编译器：理解多种程序表示，例如 CFG, ANF, (P)HOAS 等，理解语义正规化（NbE）。熟悉大部分 parser 生成器，理解基于布局的语法解析。
+      - 编译器：理解多种程序表示，例如 CFG, ANF, (P)HOAS 等，理解语义正规化（NbE）。熟悉大部分 parser 生成器，理解布局的语法解析。
     ])
-  }
-  let progLang = {
-    let very = "Java Kotlin Rust C# Agda Haskell Arend"
-    let somehow = "Dart C C++ F# F* Idris Perl MATLAB"
-    translate(en: [
-      - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
-    ], zh: [
-      - 编程语言：泛语言（编程不受特定语言限制），且尤其熟悉 #very，较为熟悉 #somehow（排名均不分先后）。
-    ])
-  }
-  let ideDev = {
-    let pref = "https://plugins.jetbrains.com/plugin/"
-    let julia = link(pref + "10413")[Julia]
-    let dtlc  = link(pref + "12176")[DTLC]
-    let pest  = link(pref + "12046")[Pest]
-    translate(en: [
-      - IDE Tooling: *4 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, etc.), also have experience with Eclipse/SonarQube/VSCode plugin development.
-    ], zh: [
-      - IDE 工具开发：*4 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest 等插件），同时了解 Eclipse/SonarQube/VSCode 的插件开发。
-    ])
-  }
-  let kotlinJava = {
-    translate(
-      en: [- Kotlin/Java: *8 years of experience*, familiar with JNI, Gradle, Kotlin coroutines, and Swing.],
-      zh: [- Kotlin/Java：*8 年开发经验*，熟悉 JNI, Gradle, Kotlin coroutines, Swing。]
+    let progLang = {
+      let very = "Java Kotlin Rust C# Agda Haskell Arend"
+      let somehow = "Dart C C++ F# F* Idris Perl MATLAB"
+      translate(en: [
+        - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
+      ], zh: [
+        - 编程语言：泛语言（编程不受特定语言限制），且尤其熟悉 #very，较为熟悉 #somehow（排名均不分先后）。
+      ])
+    }
+    let ideDev = {
+      let pref = "https://plugins.jetbrains.com/plugin/"
+      let julia = link(pref + "10413")[Julia]
+      let dtlc  = link(pref + "12176")[DTLC]
+      let pest  = link(pref + "12046")[Pest]
+      translate(en: [
+        - IDE Tooling: *4 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, etc.), also have experience with Eclipse/SonarQube/VSCode plugin development.
+      ], zh: [
+        - IDE 工具开发：*4 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest 等插件），同时了解 Eclipse/SonarQube/VSCode 的插件开发。
+      ])
+    }
+    let kotlinJava = {
+      let before-swing = "JNI, JPMS, Gradle, Kotlin coroutines"
+      translate(
+        en: [- Kotlin/Java: *8 years of experience*, familiar with #before-swing, and Swing.],
+        zh: [- Kotlin/Java：*8 年开发经验*，熟悉 #before-swing, Swing。]
+      )
+    }
+    let mobileDev = translate(
+      en: [- Mobile Development: *2 years of experience*, familiar with Flutter and Android.],
+      zh: [- 移动端开发：*2 年开发经验*，熟悉 Flutter、Android。]
     )
-  }
-  let mobileDev = {
-    translate(
-      en: [- Mobile Development: *2 years of experience*, familiar with Flutter, Android, and iOS.],
-      zh: [- 移动端开发：*2 年开发经验*，熟悉 Flutter, Android, iOS。]
-    )
-  }
-  let typeTheory = {
-    translate(
+    let typeTheory = translate(
       en: [- Type Theory: understand Martin-Löf type theory, coinduction, HoTT, and Cubical, familiar with Idris, Agda (*3 years* of experience, contributor), Arend and some Lean/F★/Coq.],
-      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*3 年经验*，开发组成员），Arend 和一些 Lean/F★/Coq。]
+      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*3 年经验*，编译器和标准库贡献者），Arend 和一些 Lean/F★/Coq。]
     )
-  }
-
-  let skills = {
     progLang
     compiler
     kotlinJava
@@ -319,7 +350,9 @@
     // What to do with this?
     // let personal = "https://personal.psu.edu/yqz5714"
     let seRep    = [6000+]
+    let paRep    = [5000+]
     let stackex(e) = link("https://stackexchange.com/users/9532102")[#e]
+    let pase     = link("https://proofassistants.stackexchange.com/users/32/ice1000")[Proof Assistants]
     // https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
     let enSimple = link("https://tinyurl.com/y8xdlfug")
     // https://raw.githubusercontent.com/ice1000/resume/master/resume-elab.pdf
@@ -330,7 +363,7 @@
     let cwLevel  = [*1 dan*]
     let cwPerc   = [0.020%]
     let cwRank   = [\#111]
-    let projects = [*agda, Arend, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, intellij-rust, TeXiFy-IDEA, rust-analyzer*]
+    let projects = [*agda, Arend, libgdx, jacoco, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, intellij-rust, TeXiFy-IDEA, rust-analyzer*]
 
     translate(en: noSimple(simple: [
       - Profile links (please use a PDF reader with hyperlink support):
@@ -355,8 +388,8 @@
     )
     [- #link("https://stackoverflow.com/users/7083401/ice1000")[StackOverflow]: #seRep
       #translate(
-        en: [reputation, also active on #stackex("other StackExchange sites")],
-        zh: [声誉，同时也在#stackex("其他 StackExchange 子站")活跃]
+        en: [reputation, also active on #pase (#paRep reputation) and #stackex("other StackExchange sites")],
+        zh: [声誉，同时也在 #pase（#paRep 声誉）和#stackex("其他 StackExchange 子站")活跃]
       )
     ]
     translate(
@@ -364,7 +397,7 @@
         - Latest revision of this resume: one-page version #enSimple, complete version: #enElab
         #noSimple[- Get the Chinese version of this resume: #cnLink]
       ],
-      zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）: #enSimple]
+      zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）：#enSimple]
     )
     translate(
       en: [
@@ -397,6 +430,12 @@
   noSimple[
     #arendVSCode
     #arendIO
+  ]
+
+  noSimple[
+    #translate(en: [== Academic Experience], zh: [== 学术经历])
+    #mcREU
+    #la461
   ]
 
   translate(en: [== Skills], zh: [== 技能])
