@@ -175,7 +175,7 @@
       zh: cventry(
         tl: [*北京奇点无限数据科技有限公司*，远程],
         tr: risingwave-date,
-        bl: [数据库开发, 实习],
+        bl: [数据库开发，实习],
       )[
       - 提案重构查询计划语法树的设计以更好地使用 Rust 编程语言的枚举功能。
       - 实现将树状数据使用 Unicode 艺术可视化的算法，会计算行宽并支持智能断行，集成到 SQL explain 中。
@@ -209,7 +209,7 @@
         tr: la461-date,
       )[],
       zh: cventry(
-        tl: [*Cmpsc 461 课程助教*（编程语言概念），州学院],
+        tl: [*Cmpsc 461 课程助教*（课程标题：编程语言概念），州学院],
         tr: la461-date,
       )[],
     )
@@ -222,14 +222,14 @@
         tr: githublink("aya-prover/aya-dev"),
       )[
       - Supports dependent types, dependent pattern matching with confluence check for overlapping cases, higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments.
-      - Supports visualization of the type checking traces and exporting elaboration result to HTML or LaTeX. Supports LSP in VSCode. Binaries releases are built with jlink and GraalVM native-image.
+      - Supports visualization of the type checking traces and exporting elaboration result to HTML or #latex. Supports LSP in VSCode. Binaries releases are built with jlink and GraalVM native-image.
       ],
       zh: cventry(
         tl: [*Aya Prover*，实用的依值类型系统实现（职位：项目组长）],
         tr: githublink("aya-prover/aya-dev"),
       )[
       - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。
-      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 LaTeX。支持 VSCode 的语言服务器协议。二进制分发使用 jlink 和 GraalVM 原生镜像构建。
+      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 #latex。支持 VSCode 的语言服务器协议。二进制分发使用 jlink 和 GraalVM 原生镜像构建。
       ],
     )
   }
@@ -294,7 +294,7 @@
     ])
     let progLang = {
       let very = "Java Kotlin Rust C# Agda Haskell Arend"
-      let somehow = "Dart C C++ F# F* Idris Perl MATLAB"
+      let somehow = "Dart C C++ F# F★ Idris Perl MATLAB"
       translate(en: [
         - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
       ], zh: [
