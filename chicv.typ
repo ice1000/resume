@@ -16,7 +16,7 @@
 }
 
 #let githublink(userRepo) = {
-  link("https://github.com/" + userRepo)[#fa[#github]]
+  link("https://github.com/" + userRepo)[#fa[#github] #userRepo]
 }
 
 // https://github.com/typst/typst/issues/1987#issuecomment-1690672386
