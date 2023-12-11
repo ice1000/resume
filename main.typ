@@ -48,11 +48,11 @@
       en: cventry(
         tl: [Ph.D. in Computer Science at *Carnegie Mellon University*, PA, US],
         tr: cmu-date,
-      )[],
+      )[Advisor: Stephanie Balzer],
       zh: cventry(
         tl: [卡内基梅隆大学，计算机科学专业，博士，美国],
         tr: cmu-date,
-      )[],
+      )[导师：Stephanie Balzer],
     )
   }
 
@@ -447,7 +447,7 @@
   // https://github.com/typst/typst/issues/1462
   {
     set text(size: 0pt)
-    cite("SIT")
+    [@SIT]
   }
   translate(en: [== Publications], zh: [== 论文发表])
   bibliography("pub.bib", title: none)
