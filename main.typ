@@ -448,7 +448,8 @@
   {
     set text(size: 0pt)
     [@SIT]
+    noSimple[@ExactlyApplied, @Guest, @ExtTyApp, @FordHelix]
   }
-  translate(en: [== Publications], zh: [== 论文发表])
+  translate(en: [== Publications & Preprints], zh: [== 论文发表 & 预印本])
   bibliography("pub.bib", title: none)
 }
