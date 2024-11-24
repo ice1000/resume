@@ -29,6 +29,13 @@
   )
 
   let edu = {
+    let psu-courses = (
+      ([Math 435], [Abstract Algebra], [抽象代数]),
+      ([Cmpsc 450], [Concurrent Programming], [并发科学编程]),
+      ([Math 427], [Foundations of Geometry], [几何基础]),
+      ([Math 429], [Introduction to Topology], [拓扑学入门]),
+      ([Math 437], [Algebraic Geometry], [代数几何]),
+    )
     translate(en: [== Education], zh: [== 教育经历])
     let gpa = 3.28
     let psu-date = [#translate-date(8, 2018) -- #translate-date(12, 2022)]
@@ -36,23 +43,33 @@
       en: cventry(
         tl: [B.S. in Computer Science at *The Pennsylvania State University*, PA, US],
         tr: psu-date,
-      )[Minor in Mathematics, GPA #gpa/4.00],
+      )[Minor in Mathematics, GPA #gpa/4.00#noSimple(simple: [,
+        selected courses: #psu-courses.map(item => item.at(0)).join(", ")])[\
+        Selected courses: #psu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
       zh: cventry(
         tl: [宾夕法尼亚州州立大学，计算机科学专业，本科，美国],
         tr: psu-date,
-      )[副专业：数学, GPA #gpa/4.00],
+      )[副专业：数学, GPA #gpa/4.00\
+        部分选修课程：#psu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
     )
 
+    let cmu-courses = (
+      ([15-836], [Substructural Logics], [亚结构逻辑]),
+      ([15-791], [Advanced Topics in Foundations of Types and Programming Languages], [类型和编程语言基础中的高级课题])
+    )
     let cmu-date = [#translate-date(8, 2023) -- #current]
     translate(
       en: cventry(
         tl: [Ph.D. in Computer Science at *Carnegie Mellon University*, PA, US],
         tr: cmu-date,
-      )[Advisor: Stephanie Balzer],
+      )[Advisor: Stephanie Balzer#noSimple(simple: [,
+        selected courses: #cmu-courses.map(item => item.at(0)).join(", ")])[\
+        Selected courses: #cmu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
       zh: cventry(
         tl: [卡内基梅隆大学，计算机科学专业，博士，美国],
         tr: cmu-date,
-      )[导师：Stephanie Balzer],
+      )[导师：Stephanie Balzer\
+        部分选修课程：#cmu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
     )
   }
 
@@ -221,14 +238,14 @@
         tl: [*Aya Prover*, Practical Implementation of Dependent Types (role: project leader)],
         tr: githublink("aya-prover/aya-dev"),
       )[
-      - Supports dependent types, dependent pattern matching with confluence check for overlapping cases, higher inductive types, GADTs, hierarchial universes, cubical type theory features, and implicit arguments.
+      - Supports dependent types, dependent pattern matching with confluence check for overlapping clauses, higher inductive types, GADTs (paper published), hierarchial universes, cubical type theory features, and implicit arguments.
       - Supports visualization of the type checking traces and exporting elaboration result to HTML or #latex. Supports LSP in VSCode. Binaries releases are built with jlink and GraalVM native-image.
       ],
       zh: cventry(
         tl: [*Aya Prover*，实用的依值类型系统实现（职位：项目组长）],
         tr: githublink("aya-prover/aya-dev"),
       )[
-      - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型、分层宇宙、立方类型论特性和隐式参数的推导。
+      - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型（已发表文章）、分层宇宙、立方类型论特性和隐式参数的推导。
       - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 #latex。支持 VSCode 的语言服务器协议。二进制分发使用 jlink 和 GraalVM 原生镜像构建。
       ],
     )
