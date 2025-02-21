@@ -6,17 +6,17 @@
   v(-10pt)
 }
 
-#import "fontawesome.typ": *;
-#let iconlink(
-  uri, text: [], icon: link-icon) = {
+#import "@preview/fontawesome:0.5.0": *
+#let link-icon = "link"
+#let iconlink(uri, text: [], icon: link-icon) = {
   if text == [] {
     text = uri
   }
-  link(uri)[#fa[#icon] #text]
+  link(uri)[#fa-icon(icon) #text]
 }
 
 #let githublink(userRepo) = {
-  link("https://github.com/" + userRepo)[#fa[#github] #userRepo]
+  link("https://github.com/" + userRepo)[#fa-icon("github") #userRepo]
 }
 
 // https://github.com/typst/typst/issues/1987#issuecomment-1690672386

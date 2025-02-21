@@ -430,7 +430,7 @@
 
   translate(en: [= #smallcaps[Tesla Zhang]], zh: [= 张寅森])
 
-  [#link("mailto:ice1000kotlin@gmail.com")[ice1000kotlin\@gmail.com] $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: github)]
+  [#link("mailto:ice1000kotlin@gmail.com")[ice1000kotlin\@gmail.com] $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: "github")]
 
   edu
 
@@ -470,3 +470,8 @@
   translate(en: [== Publications & Preprints], zh: [== 论文发表 & 预印本])
   bibliography("pub.bib", title: none)
 }
+
+If you are seeing this in your compilation output,
+it's caused by running `typst c main.typ` directly.
+Please use the build scripts instead. In fact, please read the README.md file
+(this message is created because I got a bug report from people who didn't read the README file).
