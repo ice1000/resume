@@ -239,14 +239,14 @@
         tr: githublink("aya-prover/aya-dev"),
       )[
       - Supports dependent types, dependent pattern matching with confluence check for overlapping clauses, higher inductive types, GADTs (paper published), hierarchial universes, cubical type theory features, and implicit arguments.
-      - Supports visualization of the type checking traces and exporting elaboration result to HTML or #latex. Supports LSP in VSCode. Binaries releases are built with jlink and GraalVM native-image.
+      - Can export elaboration result to HTML or #latex. Can JIT-compile closures into JVM using HOAS, Can refine patterns using coverage information. Supports both LSP in VSCode and IntelliJ PSI. Provide jlink binary releases.
       ],
       zh: cventry(
         tl: [*Aya Prover*，实用的依值类型系统实现（职位：项目组长）],
         tr: githublink("aya-prover/aya-dev"),
       )[
       - 支持依值类型、依值模式匹配及重叠情况一致性检查、高阶归纳类型、泛化代数数据类型（已发表文章）、分层宇宙、立方类型论特性和隐式参数的推导。
-      - 支持可视化类型检查的完整证明树、导出繁饰结果到网页或 #latex。支持 VSCode 的语言服务器协议。二进制分发使用 jlink 和 GraalVM 原生镜像构建。
+      - 能导出繁饰结果到网页或 #latex。能将解释执行时的闭包 JIT 编译到 Java 字节码（使用 HOAS 接入原本的语法树）。能根据模式匹配覆盖情况智能对模式细化。同时支持 VSCode 的语言服务器协议和 IntelliJ 的代码分析框架。提供 jlink 二进制分发。
       ],
     )
   }
@@ -304,10 +304,10 @@
       ], zh: [- 开发工具：能适应任何常见编辑器/操作系统，有使用 #tools.join("、") 等团队协作工具的经验。])
     }
     let compiler = translate(en: [
-      - Compiler: understand various program representations such as CFG, ANF, (P)HOAS, etc. and normalization by evaluation.
+      - Compiler: understand techniques like locally nameless, explicit substitution, ANF, (P)HOAS (in LF & logic programming), and NbE.
         #noSimple[Familiar with most parser generators, understand layout syntax parsing.]
     ], zh: [
-      - 编译器：理解多种程序表示，例如 CFG, ANF, (P)HOAS 等，理解语义正规化（NbE）。熟悉大部分 parser 生成器，理解布局的语法解析。
+      - 编译器：理解局部无名表示法、惰性代换（ES）、ANF、(P)HOAS 等技术，理解语义正规化（NbE）及其使用的惰性闭包技术。熟悉大部分 parser 生成器，理解布局的语法解析。
     ])
     let progLang = {
       let very = "Java Kotlin Rust C# Agda Haskell Arend"
@@ -323,17 +323,18 @@
       let julia = link(pref + "10413")[Julia]
       let dtlc  = link(pref + "12176")[DTLC]
       let pest  = link(pref + "12046")[Pest]
+      let kala  = link(pref + "17453")[Kala Inspections]
       translate(en: [
-        - IDE Tooling: *4 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, etc.), also have experience with Eclipse/SonarQube/VSCode plugin development.
+        - IDE Tooling: *6 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, #kala, etc.), also have experience with VSCode plugin development.
       ], zh: [
-        - IDE 工具开发：*4 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest 等插件），同时了解 Eclipse/SonarQube/VSCode 的插件开发。
+        - IDE 工具开发：*6 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest、#kala 等插件），同时了解 VSCode 的插件开发。
       ])
     }
     let kotlinJava = {
       let before-swing = "JNI, JPMS, Gradle, Kotlin coroutines"
       translate(
-        en: [- Kotlin/Java: *8 years of experience*, familiar with #before-swing, and Swing.],
-        zh: [- Kotlin/Java：*8 年开发经验*，熟悉 #before-swing, Swing。]
+        en: [- Kotlin/Java: *10 years of experience*, familiar with #before-swing, and Swing.],
+        zh: [- Kotlin/Java：*10 年开发经验*，熟悉 #before-swing, Swing。]
       )
     }
     let mobileDev = translate(
@@ -341,8 +342,8 @@
       zh: [- 移动端开发：*2 年开发经验*，熟悉 Flutter、Android。]
     )
     let typeTheory = translate(
-      en: [- Type Theory: understand Martin-Löf type theory, coinduction, HoTT, and Cubical, familiar with Idris, Agda (*3 years* of experience, contributor), Arend and some Lean/F★/Coq.],
-      zh: [- 类型论：理解 Martin-Löf 类型论、逆归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*3 年经验*，编译器和标准库贡献者），Arend 和一些 Lean/F★/Coq。]
+      en: [- Type Theory: understand Martin-Löf type theory, coinduction, HoTT, and Cubical, familiar with Idris, Agda (*5 years* of experience, contributor), Arend and some Lean/F★/Coq.],
+      zh: [- 类型论：理解 Martin-Löf 类型论、余归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*5 年经验*，编译器和标准库贡献者），Arend 和一些 Lean/F★/Coq。]
     )
     progLang
     compiler
@@ -428,7 +429,7 @@
 
   // Start of the document
 
-  translate(en: [= #smallcaps[Tesla Zhang]], zh: [= 张寅森])
+  translate(en: [= #smallcaps[Tesla Zhang]], zh: [= #smallcaps[Tesla Zhang] (千里冰封)])
 
   [#link("mailto:ice1000kotlin@gmail.com")[ice1000kotlin\@gmail.com] $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: "github")]
 
